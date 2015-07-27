@@ -29,6 +29,8 @@ set showmatch
 
 " Disable backups
 set nobackup
+set nowritebackup
+set noswapfile
 
 "Automatically reload the file when it is changed
 set autoread
