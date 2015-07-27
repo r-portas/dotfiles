@@ -3,3 +3,4 @@
 # The dotfiles folder should be in the user's home directory
 
 ln -s dotfiles/vimrc .vimrc
+ln -s dotfiles/tmux.conf .tmux.conf
