@@ -1,6 +1,10 @@
 " Editor configuration
 syntax enable
 
+" Better block indenting
+vnoremap > >gv
+vnoremap < <gv
+
 " Line numbering
 set number
 
