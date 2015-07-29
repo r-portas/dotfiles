@@ -42,3 +42,6 @@ set backspace=2
 " Filetype plugins
 filetype plugin on
 filetype indent on
+
+" Fix screen color
+set term=screen-256color
