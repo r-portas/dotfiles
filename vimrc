@@ -37,6 +37,9 @@ set autoindent
 " Always show the current position
 set ruler
 
+" Always show status line
+set laststatus=2
+
 " Ignore case when searching
 set ignorecase
 
