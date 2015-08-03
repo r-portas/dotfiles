@@ -62,7 +62,7 @@ filetype indent on
 set hlsearch
 
 " Set colour column
-set colorcolumn=80
+" set colorcolumn=80
 
 " Fix screen color
 set term=screen-256color
