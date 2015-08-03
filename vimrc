@@ -1,4 +1,17 @@
-" Editor configuration
+" Set up Vundle
+" set nocompatible
+" filetype off
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+" Plugin 'gmarik/Vundle.vim'
+" Plugin 'bronson/vim-trailing-whitespace'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'airblade/vim-gitgutter'
+" Plugin 'kien/ctrlp.vim'
+
+" call vundle#end()
+
+" Enable syntax highlightingn
 syntax enable
 
 " Better block indenting
@@ -7,6 +20,7 @@ vnoremap < <gv
 
 " Line numbering
 set number
+set numberwidth=5
 
 "Allow mouse input
 set mouse=a
@@ -39,6 +53,12 @@ set autoread
 " Map ctrl-p to ctrl-a
 inoremap <C-a> <C-P>
 
+" Fix backspace
+set backspace=2
+
 " Filetype plugins
 filetype plugin on
 filetype indent on
+
+" Fix screen color
+set term=screen-256color
