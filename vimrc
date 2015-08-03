@@ -11,7 +11,7 @@
 
 " call vundle#end()
 
-" Enable syntax highlightingn
+" Enable syntax highlighting
 syntax enable
 
 " Better block indenting
@@ -26,7 +26,9 @@ set numberwidth=5
 set mouse=a
 
 " 1 tab == 4 spaces
+" set expandtab
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 
 " Autoindent stuff
@@ -55,6 +57,12 @@ set backspace=2
 " Filetype plugins
 filetype plugin on
 filetype indent on
+
+" Highlight search results
+set hlsearch
+
+" Set colour column
+set colorcolumn=80
 
 " Fix screen color
 set term=screen-256color
