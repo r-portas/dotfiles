@@ -35,6 +35,10 @@ set noswapfile
 "Automatically reload the file when it is changed
 set autoread
 
+" Key mapping
+" Map ctrl-p to ctrl-a
+inoremap <C-a> <C-P>
+
 " Filetype plugins
 filetype plugin on
 filetype indent on
