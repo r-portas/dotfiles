@@ -58,9 +58,6 @@ set backspace=2
 filetype plugin on
 filetype indent on
 
-" Highlight search results
-set hlsearch
-
 " Set colour column
 set colorcolumn=80
 
