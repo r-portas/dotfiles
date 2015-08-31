@@ -1,15 +1,15 @@
 " Set up Vundle
-" set nocompatible
-" filetype off
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
-" Plugin 'gmarik/Vundle.vim'
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 " Plugin 'bronson/vim-trailing-whitespace'
-" Plugin 'Valloric/YouCompleteMe'
-" Plugin 'airblade/vim-gitgutter'
-" Plugin 'kien/ctrlp.vim'
-
-" call vundle#end()
+Plugin 'airblade/vim-gitgutter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+call vundle#end()
 
 " Enable syntax highlighting
 syntax enable
