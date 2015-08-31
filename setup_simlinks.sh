@@ -1,6 +1,4 @@
-# This should be ran within the user's home directory
-# i.e. 'sh dotfiles/setup_simlinks.sh'
-# The dotfiles folder should be in the user's home directory
+# Run this script within the current directory
 
-ln -s dotfiles/vimrc .vimrc
-ln -s dotfiles/tmux.conf .tmux.conf
+ln -s vimrc ~/.vimrc
+ln -s tmux.conf ~/.tmux.conf
