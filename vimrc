@@ -27,11 +27,15 @@ set mouse=a
 
 " 1 tab == 4 spaces
 set expandtab
-set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 
 " Autoindent stuff
 set autoindent
+
+" Command line completion
+set wildmenu
+set showcmd
 
 " Always show the current position
 set ruler
@@ -55,6 +59,9 @@ set autoread
 
 " Fix backspace
 set backspace=2
+
+" Set paste toggle
+set pastetoggle=<F11>
 
 " Filetype plugins
 filetype plugin on
