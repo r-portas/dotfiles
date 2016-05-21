@@ -31,7 +31,9 @@ set softtabstop=4
 set shiftwidth=4
 
 " Autoindent stuff
-set autoindent
+set ai
+set si
+set wrap
 
 " Command line completion
 set wildmenu
@@ -69,6 +71,3 @@ filetype indent on
 
 " Set colour column
 " set colorcolumn=80
-
-" Fix screen color
-set term=screen-256color
