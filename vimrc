@@ -7,7 +7,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
-Plugin 'vim-airline/vim-airline'
 call vundle#end()
 
 " Enable syntax highlighting
