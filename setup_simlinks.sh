@@ -2,7 +2,7 @@
 # For example 'sh dotfiles/setup_simlinks.sh'
 
 ln -s `pwd`/vimrc ~/.vimrc
-ln -s `pwd`/bashrc ~/.bashrc
+ln -s `pwd`/bash_profile ~/.bash_profile
 ln -s `pwd`/tmux.conf ~/.tmux.conf
 
 # Clone vundle
