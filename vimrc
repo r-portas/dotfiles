@@ -4,11 +4,10 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-" Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
+Plugin 'vim-airline/vim-airline'
 call vundle#end()
 
 " Enable syntax highlighting
