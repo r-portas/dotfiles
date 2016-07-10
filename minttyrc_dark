@@ -1,10 +1,10 @@
 CursorType=     Block
-Font=           Roboto Mono
+Font=           Hack
 FontHeight=     10
 RightClickAction= Paste
 
-ForegroundColour=101, 123, 131
-BackgroundColour=253, 246, 227
+ForegroundColour=131, 148, 150
+BackgroundColour=  0,  43,  54
 CursorColour=    220,  50,  47
 
 Black=             7,  54,  66
