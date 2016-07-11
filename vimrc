@@ -14,7 +14,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
-Plugin 'itchyny/lightline.vim' 
+Plugin 'itchyny/lightline.vim'
+Plugin 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
 Bundle 'altercation/vim-colors-solarized'           " Solarized for gvim
 call vundle#end()
 
