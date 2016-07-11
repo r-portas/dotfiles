@@ -16,7 +16,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'itchyny/lightline.vim'
 Plugin 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
-Bundle 'altercation/vim-colors-solarized'           " Solarized for gvim
+Plugin 'altercation/vim-colors-solarized'           " Solarized for gvim
 call vundle#end()
 
 " Use the solarized dark theme (NOTE: Requires 256 bit terminal colours)
