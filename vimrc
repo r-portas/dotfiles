@@ -14,8 +14,13 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
-Plugin 'itchyny/lightline.vim'
+Plugin 'itchyny/lightline.vim' 
+Bundle 'altercation/vim-colors-solarized'           " Solarized for gvim
 call vundle#end()
+
+" Use the solarized dark theme (NOTE: Requires 256 bit terminal colours)
+set background=dark
+colorscheme solarized
 
 " Enable syntax highlighting
 syntax enable
@@ -86,6 +91,7 @@ filetype indent on
 " Set colour column
 " set colorcolumn=80
 
+" Setup gvim options
 if has("gui_running")
     set guifont=Hack:h10
 end
