@@ -1,5 +1,5 @@
-# Run this script within the user's home directory
-# For example 'sh dotfiles/setup_simlinks.sh'
+# Run this script within the dotfiles folder
+# e.g. `bash setup_similinks.sh`
 
 ln -s `pwd`/vimrc ~/.vimrc
 ln -s `pwd`/bash_profile ~/.bash_profile
