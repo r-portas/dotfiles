@@ -1,6 +1,6 @@
 # Aliases
 # alias ls="ls -G" TODO: Fix me
-alias svim="sudo vim"
+alias svim="sudo -E vim"
 
 # Enable 256 bit colours
 export TERM=xterm-256color
