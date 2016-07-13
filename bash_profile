@@ -1,6 +1,13 @@
 # Aliases
 # alias ls="ls -G" TODO: Fix me
 alias svim="sudo -E vim"
+alias rm="rm -v"
+alias myip="curl -s http://ipecho.net/plain; echo"
+
+# Tar related aliases
+alias tarc="tar czvf"
+alias tarx="tar xzvf"
+alias tart="tar tzvf"
 
 # Enable 256 bit colours
 export TERM=xterm-256color
