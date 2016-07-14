@@ -10,13 +10,14 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'kien/ctrlp.vim'
-Plugin 'ervandew/supertab'
-Plugin 'itchyny/lightline.vim'
+Plugin 'gmarik/Vundle.vim' 
+Plugin 'airblade/vim-gitgutter'                     " Display git on the gutter
+Plugin 'kien/ctrlp.vim'                             " File searching
+Plugin 'ervandew/supertab'                          " Autocompletion
+Plugin 'itchyny/lightline.vim'                      " Custom statusbar
 Plugin 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
-Plugin 'altercation/vim-colors-solarized'           " Solarized for gvim
+Plugin 'altercation/vim-colors-solarized'           " Solarized for vim
+Plugin 'kshenoy/vim-signature'                      " Add signatures to display marks
 call vundle#end()
 
 " Use the solarized dark theme (NOTE: Requires 256 bit terminal colours)
