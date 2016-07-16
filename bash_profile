@@ -1,16 +1,33 @@
 # Aliases
-# alias ls="ls -G" TODO: Fix me
 alias svim="sudo -E vim"
 alias rm="rm -v"
 alias myip="curl -s http://ipecho.net/plain; echo"
+alias webserver2="python -m SimpleHTTPServer 8000"
+alias webserver3="python3 -m http.server 8000"
 
 # Tar related aliases
 alias tarc="tar czvf"
 alias tarx="tar xzvf"
 alias tart="tar tzvf"
 
+
 # Enable 256 bit colours
 export TERM=xterm-256color
+
+# Load extra bash profiles for OS
+# TODO: Add Windows types
+case "$OSTYPE" in
+    solaris*)
+        echo "Solaris / EAIT Zone"
+        ;;
+    darwin*)
+        echo "OSX - Loading additional configuration"
+        source ~/dotfiles/mac_profile
+        ;;
+    linux*)
+        echo "Linux"
+        ;;
+esac
 
 # Show git branch
 parse_git_branch() {
