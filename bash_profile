@@ -18,14 +18,14 @@ export TERM=xterm-256color
 # TODO: Add Windows types
 case "$OSTYPE" in
     solaris*)
-        echo "Solaris / EAIT Zone"
+        echo "Solaris / EAIT SmartOS Zone host detected"
         ;;
     darwin*)
-        echo "OSX - Loading additional configuration"
-        source ~/dotfiles/mac_profile
+        echo "OSX host detected"
+        source ~/dotfiles/mac/mac_profile
         ;;
     linux*)
-        echo "Linux"
+        echo "Linux host detected"
         ;;
 esac
 

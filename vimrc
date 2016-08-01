@@ -16,13 +16,10 @@ Plugin 'kien/ctrlp.vim'                             " File searching
 Plugin 'ervandew/supertab'                          " Autocompletion
 Plugin 'itchyny/lightline.vim'                      " Custom statusbar
 Plugin 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
-Plugin 'altercation/vim-colors-solarized'           " Solarized for vim
 Plugin 'kshenoy/vim-signature'                      " Add signatures to display marks
 call vundle#end()
 
-" Use the solarized dark theme (NOTE: Requires 256 bit terminal colours)
 set background=dark
-colorscheme solarized
 
 " Enable syntax highlighting
 syntax enable
