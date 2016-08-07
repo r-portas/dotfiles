@@ -1,0 +1,8 @@
+alias lockscreen='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+
+# Show and Hide hidden files
+alias show_hidden_files='defaults write com.apple.finder AppleShowAllFiles -bool TRUE && killall Finder'
+alias hide_hidden_files='defaults write com.apple.finder AppleShowAllFiles -bool FALSE && killall Finder'
+
+# Get IP Address
+alias get_ip='ipconfig getifaddr en0'
