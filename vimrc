@@ -11,10 +11,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim' 
+Plugin 'ap/vim-css-color'                           " CSS colouring
 Plugin 'airblade/vim-gitgutter'                     " Display git on the gutter
 Plugin 'kien/ctrlp.vim'                             " File searching
 Plugin 'ervandew/supertab'                          " Autocompletion
-Plugin 'itchyny/lightline.vim'                      " Custom statusbar
+Plugin 'itchyny/lightline.vim'                      " Custom statusbar (Requires 256 bit colours)
 Plugin 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
 Plugin 'kshenoy/vim-signature'                      " Add signatures to display marks
 call vundle#end()
@@ -86,6 +87,19 @@ set pastetoggle=<F11>
 " Filetype plugins
 filetype plugin on
 filetype indent on
+
+" Send more characters
+set ttyfast
+
+" Set title to filename
+set title
+
+" Define how split works
+set splitbelow
+set splitright
+
+" Disable intro message
+set shortmess=atI
 
 " Set colour column
 " set colorcolumn=80

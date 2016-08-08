@@ -1,7 +1,7 @@
 # Aliases
 alias svim="sudo -E vim"
 alias rm="rm -v"
-alias myip="curl -s http://ipecho.net/plain; echo"
+alias ip="curl -s http://ipecho.net/plain; echo"
 alias webserver2="python -m SimpleHTTPServer 8000"
 alias webserver3="python3 -m http.server 8000"
 
