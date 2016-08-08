@@ -1,0 +1,12 @@
+#
+# Windows specific configuration
+#
+
+# Configuration
+alias localip="ipconfig | grep 'IPv4 Address' | cut -d':' -f2"
+
+# Directory aliases
+alias pro="~/projects"
+alias c="clip"
+alias emptytrash="rm -rv /c/'\$Recycle.Bin'/*"
+alias lockscreen="rundll32.exe user32.dll,LockWorkStation"
