@@ -3,7 +3,9 @@
 
 # Setup Simlinks
 ln -s `pwd`/vimrc ~/.vimrc
+rm ~/.bash_profile
 ln -s `pwd`/bash_profile ~/.bash_profile
+source ~/.bash_profile
 ln -s `pwd`/tmux.conf ~/.tmux.conf
 
 # Clone vundle

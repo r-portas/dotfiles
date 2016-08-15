@@ -15,7 +15,6 @@ alias tart="tar tzvf"
 export TERM=xterm-256color
 
 # Load extra bash profiles for OS
-# TODO: Add Windows types
 case "$OSTYPE" in
     solaris*)
         echo "Solaris / EAIT SmartOS Zone host detected"
@@ -33,11 +32,18 @@ case "$OSTYPE" in
         ;;
 esac
 
+# Check for a SSH connection
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    echo "Connected over SSH"
+fi
+
 # Show git branch
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
 # Bash line
-export PS1="\[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\] [\[\e[34m\]\W\[\e[m\]]\[\e[32m\]\$(parse_git_branch)\[\e[m\]: "
-
+export PS1="\[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\] [\[\e[34m\]\W\[\e[m\]]\[\e[32m\] $(parse_git_branch) \[\e[m\]\n> "
