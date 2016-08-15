@@ -68,4 +68,4 @@ function parse_git_branch {
 }
 
 # Bash line
-export PS1="${HOST_COLOR}\u@\h${COLOR_NC} [${COLOR_BLUE}\W${COLOR_NC}] ${COLOR_GREEN}\$(parse_git_branch) ${COLOR_NC}"$"$ "
+export PS1="${HOST_COLOR}\u@\h${COLOR_NC} [${COLOR_BLUE}\W${COLOR_NC}] ${COLOR_GREEN}\$(parse_git_branch) ${COLOR_NC}"$'\n$ '
