@@ -50,10 +50,16 @@ case "$OSTYPE" in
         ;;
 esac
 
+# A local connection (Not SSH) will have a green hostname
+export HOST_COLOR=$COLOR_GREEN
+
 # Check for a SSH connection
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     ssh_details=($SSH_CONNECTION)
     echo -e "${COLOR_RED}SSH: Client connected from ${ssh_details[0]}:${ssh_details[1]}${COLOR_NC}"
+
+    # A SSH connection will be yellow
+    export HOST_COLOR=$COLOR_RED
 fi
 
 # Show git branch
@@ -62,4 +68,4 @@ function parse_git_branch {
 }
 
 # Bash line
-export PS1="\[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\] [\[\e[34m\]\W\[\e[m\]]\[\e[32m\] \$(parse_git_branch) \[\e[m\]"$"$ "
+export PS1="${HOST_COLOR}\u@\h [${COLOR_BLUE}\W${COLOR_NC}] ${COLOR_GREEN}\$(parse_git_branch) ${COLOR_NC}"$"$ "
