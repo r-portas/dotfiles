@@ -109,10 +109,5 @@ if has("gui_running")
     set guifont=Hack:h10
 end
 
-" Lightline configuration
-let g:lightline = {
-            \ 'colorscheme': 'solarized'
-            \ }
-
 " Hide the duplicated data caused by lightline
 set noshowmode

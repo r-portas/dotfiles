@@ -27,6 +27,10 @@ case "$OSTYPE" in
     linux*)
         echo "Linux host detected"
         ;;
+    msys*)
+        echo "Windows host detected"
+        source ~/dotfiles/windows/windows_profile
+        ;;
 esac
 
 # Show git branch
