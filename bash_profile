@@ -53,15 +53,12 @@ esac
 # Check for a SSH connection
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     ssh_details=($SSH_CONNECTION)
-    echo "${COLOR_RED}SSH: Client connected from ${ssh_details[0]}:${ssh_details[1]}${COLOR_NC}"
+    echo -e "${COLOR_RED}SSH: Client connected from ${ssh_details[0]}:${ssh_details[1]}${COLOR_NC}"
 fi
 
 # Show git branch
-function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
-}
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1]/"
 }
 
 # Bash line
