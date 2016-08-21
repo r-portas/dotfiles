@@ -1,3 +1,10 @@
+#
+# Default configuration for bash
+# Loads in OS specific files as required
+#
+# Author: Roy Portas
+#
+
 # Aliases
 alias svim="sudo -E vim"
 alias rm="rm -v"

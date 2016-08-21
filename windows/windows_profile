@@ -12,3 +12,7 @@ alias pro="~/projects"
 alias c="clip"
 alias emptytrash="rm -rv /c/'\$Recycle.Bin'/*"
 alias lockscreen="rundll32.exe user32.dll,LockWorkStation"
+
+# Change mintty theme
+alias light_theme="cp ~/dotfiles/windows/mintty/minttyrc_light ~/.minttyrc"
+alias dark_theme="cp ~/dotfiles/windows/mintty/minttyrc_dark ~/.minttyrc"

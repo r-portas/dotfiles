@@ -20,7 +20,7 @@ Plugin 'editorconfig/editorconfig-vim'              " Allows project based vim c
 Plugin 'kshenoy/vim-signature'                      " Add signatures to display marks
 call vundle#end()
 
-set background=dark
+set background=light
 
 " Enable syntax highlighting
 syntax enable
@@ -90,9 +90,6 @@ filetype indent on
 
 " Send more characters
 set ttyfast
-
-" Set title to filename
-set title
 
 " Define how split works
 set splitbelow

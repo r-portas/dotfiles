@@ -1,6 +1,6 @@
 CursorType=     Block
-Font=           Hack
-FontHeight=     10
+Font=           Consolas
+FontHeight=     12
 RightClickAction= Paste
 
 ForegroundColour=101, 123, 131
