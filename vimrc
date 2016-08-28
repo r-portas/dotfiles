@@ -22,6 +22,9 @@ call vundle#end()
 
 set background=light
 
+" Copy to the system clipboard
+set clipboard^=unnamed, unnamedplus
+
 " Enable syntax highlighting
 syntax enable
 
@@ -103,7 +106,7 @@ set shortmess=atI
 
 " Setup gvim options
 if has("gui_running")
-    set guifont=Hack:h10
+    set guifont=Consolas:h12
 end
 
 " Hide the duplicated data caused by lightline
