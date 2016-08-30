@@ -22,7 +22,6 @@ call vundle#end()
 
 set background=light
 
-" Copy to the system clipboard
 set clipboard^=unnamed, unnamedplus
 
 " Enable syntax highlighting
