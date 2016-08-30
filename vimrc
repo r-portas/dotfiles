@@ -22,6 +22,9 @@ call vundle#end()
 
 set background=light
 
+" Allow system clipboard
+set clipboard=unnamed
+
 " Enable syntax highlighting
 syntax enable
 
