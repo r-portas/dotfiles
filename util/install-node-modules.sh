@@ -1,4 +1,4 @@
-# Usefully Node CLI applications
+# Useful Node CLI applications
 
 npm install -g webtorrent-cli
 npm install -g opn-cli
