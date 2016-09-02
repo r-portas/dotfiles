@@ -11,6 +11,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim' 
+Plugin 'sheerun/vim-polyglot'                       " Language syntax plugins
 Plugin 'ap/vim-css-color'                           " CSS colouring
 Plugin 'airblade/vim-gitgutter'                     " Display git on the gutter
 Plugin 'kien/ctrlp.vim'                             " File searching
