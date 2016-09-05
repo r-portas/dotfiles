@@ -6,6 +6,8 @@
 alias localip="ipconfig | grep 'IPv4 Address' | cut -d':' -f2"
 # Python needs to be ran through winpty to display output
 alias python="winpty python.exe"
+# Make meteor work
+alias meteor="cmd //c meteor"
 
 # Directory aliases
 alias pro="~/projects"
