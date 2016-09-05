@@ -23,6 +23,9 @@ call vundle#end()
 
 set background=light
 
+" Keyboard shortcuts
+:inoremap jj <esc>
+
 " Allow system clipboard
 set clipboard=unnamed
 
