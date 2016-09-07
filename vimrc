@@ -22,8 +22,11 @@ Plugin 'kshenoy/vim-signature'                      " Add signatures to display 
 call vundle#end()
 
 set background=light
+" Keyboard shortcuts
+:inoremap jj <esc>
 
-set clipboard^=unnamed, unnamedplus
+" Allow system clipboard
+set clipboard=unnamed
 
 " Enable syntax highlighting
 syntax enable

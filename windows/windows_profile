@@ -6,6 +6,8 @@
 alias localip="ipconfig | grep 'IPv4 Address' | cut -d':' -f2"
 # Python needs to be ran through winpty to display output
 alias python="winpty python.exe"
+# Make meteor work
+alias meteor="cmd //c meteor"
 
 # Directory aliases
 alias pro="~/projects"
@@ -16,3 +18,4 @@ alias lockscreen="rundll32.exe user32.dll,LockWorkStation"
 # Change mintty theme
 alias light_theme="cp ~/dotfiles/windows/mintty/minttyrc_light ~/.minttyrc"
 alias dark_theme="cp ~/dotfiles/windows/mintty/minttyrc_dark ~/.minttyrc"
+alias base16_flat_theme="cp ~/dotfiles/windows/mintty/minttyrc_dark ~/.minttyrc"
