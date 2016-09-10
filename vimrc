@@ -36,7 +36,6 @@ call plug#end()
 
 
 set background=light
-
 " Keyboard shortcuts
 :inoremap jj <esc>
 
@@ -124,7 +123,7 @@ set shortmess=atI
 
 " Setup gvim options
 if has("gui_running")
-    set guifont=Hack:h10
+    set guifont=Consolas:h12
 end
 
 " Hide the duplicated data caused by lightline
