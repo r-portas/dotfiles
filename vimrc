@@ -14,7 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'sheerun/vim-polyglot'                       " Language syntax plugins
 Plugin 'ap/vim-css-color'                           " CSS colouring
 Plugin 'airblade/vim-gitgutter'                     " Display git on the gutter
-Plugin 'kien/ctrlp.vim'                             " File searching
+Plugin 'ctrlpvim/ctrlp.vim'                         " File searching
 Plugin 'ervandew/supertab'                          " Autocompletion
 Plugin 'itchyny/lightline.vim'                      " Custom statusbar (Requires 256 bit colours)
 Plugin 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
