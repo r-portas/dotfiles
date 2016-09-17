@@ -5,21 +5,30 @@
 " Version 2.0
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Set up Vundle
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim' 
-Plugin 'sheerun/vim-polyglot'                       " Language syntax plugins
-Plugin 'ap/vim-css-color'                           " CSS colouring
-Plugin 'airblade/vim-gitgutter'                     " Display git on the gutter
-Plugin 'ctrlpvim/ctrlp.vim'                         " File searching
-Plugin 'ervandew/supertab'                          " Autocompletion
-Plugin 'itchyny/lightline.vim'                      " Custom statusbar (Requires 256 bit colours)
-Plugin 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
-Plugin 'kshenoy/vim-signature'                      " Add signatures to display marks
-call vundle#end()
+let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+
+if !filereadable(vimplug_exists)
+  echo "Installing Vim-Plug..."
+  echo ""
+  silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  let g:not_finish_vimplug = "yes"
+
+  autocmd VimEnter * PlugInstall
+endif
+
+call plug#begin(expand('~/.vim/plugged'))
+Plug 'gmarik/Vundle.vim' 
+Plug 'sheerun/vim-polyglot'                       " Language syntax plugins
+Plug 'ap/vim-css-color'                           " CSS colouring
+Plug 'airblade/vim-gitgutter'                     " Display git on the gutter
+Plug 'ctrlpvim/ctrlp.vim'                             " File searching
+Plug 'ervandew/supertab'                          " Autocompletion
+Plug 'itchyny/lightline.vim'                      " Custom statusbar (Requires 256 bit colours)
+Plug 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
+Plug 'kshenoy/vim-signature'                      " Add signatures to display marks
+Plug 'scrooloose/nerdcommenter'                   " Comment out lines of code
+
+call plug#end()
 
 set background=light
 " Keyboard shortcuts
@@ -82,7 +91,7 @@ set noswapfile
 set autoread
 
 " Fix backspace
-set backspace=2
+set backspace=indent,eol,start
 
 " Show the current mode
 set showmode
