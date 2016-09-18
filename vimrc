@@ -5,9 +5,6 @@
 " Version 2.0
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Set up Vundle
-set nocompatible
-
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
 if !filereadable(vimplug_exists)
@@ -24,7 +21,7 @@ Plug 'gmarik/Vundle.vim'
 Plug 'sheerun/vim-polyglot'                       " Language syntax plugins
 Plug 'ap/vim-css-color'                           " CSS colouring
 Plug 'airblade/vim-gitgutter'                     " Display git on the gutter
-Plug 'kien/ctrlp.vim'                             " File searching
+Plug 'ctrlpvim/ctrlp.vim'                             " File searching
 Plug 'ervandew/supertab'                          " Autocompletion
 Plug 'itchyny/lightline.vim'                      " Custom statusbar (Requires 256 bit colours)
 Plug 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
@@ -32,8 +29,6 @@ Plug 'kshenoy/vim-signature'                      " Add signatures to display ma
 Plug 'scrooloose/nerdcommenter'                   " Comment out lines of code
 
 call plug#end()
-
-
 
 set background=light
 " Keyboard shortcuts
