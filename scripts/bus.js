@@ -1,7 +1,13 @@
 #!/usr/bin/env node
 
+/**
+* Gets bus timetable information from Translink
+* @author Roy Portas
+*/
+
 var cheerio = require('cheerio');
 var got = require('got');
+var chalk = require('chalk');
 var Table = require('easy-table');
 
 var config = {
@@ -83,7 +89,7 @@ class BusStop {
     printTimetable() {
         var table = new Table;
         
-        console.log(this.stopName);
+        console.log(chalk.blue(this.stopName));
 
         this.timetable.forEach(function(item) {
             table.cell('Route', item.route);
