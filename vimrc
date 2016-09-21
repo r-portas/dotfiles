@@ -17,7 +17,6 @@ if !filereadable(vimplug_exists)
 endif
 
 call plug#begin(expand('~/.vim/plugged'))
-Plug 'gmarik/Vundle.vim' 
 Plug 'sheerun/vim-polyglot'                       " Language syntax plugins
 Plug 'ap/vim-css-color'                           " CSS colouring
 Plug 'airblade/vim-gitgutter'                     " Display git on the gutter
