@@ -25,6 +25,7 @@ Plug 'ervandew/supertab'                          " Autocompletion
 Plug 'itchyny/lightline.vim'                      " Custom statusbar (Requires 256 bit colours)
 Plug 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
 Plug 'posva/vim-vue'                              " Vue language support
+Plug 'chriskempson/base16-vim'                    " Base 16 Colorschemes
 
 call plug#end()
 
@@ -116,7 +117,8 @@ set shortmess=atI
 
 " Setup gvim options
 if has("gui_running")
-	set guifont=Consolas:h12
+	set guifont=Hack:h14
+        colorscheme base16-tomorrow-night
 end
 
 " Hide the duplicated data caused by lightline
