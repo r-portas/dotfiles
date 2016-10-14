@@ -24,7 +24,7 @@ Plug 'ctrlpvim/ctrlp.vim'                         " File searching
 Plug 'ervandew/supertab'                          " Autocompletion
 Plug 'itchyny/lightline.vim'                      " Custom statusbar (Requires 256 bit colours)
 Plug 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
-Plug 'posna/vim-vue'                              " Vue language support
+Plug 'posva/vim-vue'                              " Vue language support
 
 call plug#end()
 
