@@ -1,0 +1,122 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim configuration
+"
+" Author: Roy Portas - www.royportas.com
+" Version 2.0
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+
+if !filereadable(vimplug_exists)
+	echo "Installing Vim-Plug..."
+	echo ""
+	silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	let g:not_finish_vimplug = "yes"
+
+	autocmd VimEnter * PlugInstall
+endif
+
+call plug#begin(expand('~/.vim/plugged'))
+Plug 'sheerun/vim-polyglot'                       " Language syntax plugins
+Plug 'ap/vim-css-color'                           " CSS colouring
+Plug 'airblade/vim-gitgutter'                     " Display git on the gutter
+Plug 'ctrlpvim/ctrlp.vim'                         " File searching
+Plug 'ervandew/supertab'                          " Autocompletion
+Plug 'itchyny/lightline.vim'                      " Custom statusbar (Requires 256 bit colours)
+Plug 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
+
+call plug#end()
+
+set background=light
+" Keyboard shortcuts
+:inoremap jj <esc>
+
+" Allow system clipboard
+set clipboard=unnamed
+
+" Enable syntax highlighting
+syntax enable
+
+" Better block indenting
+vnoremap > >gv
+vnoremap < <gv
+
+" Line numbering
+set number
+set numberwidth=5
+
+" Allow mouse input
+set mouse=a
+
+" Lazy redrawing
+set lazyredraw
+
+" 1 tab == 4 spaces
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+
+" Autoindent stuff
+set ai
+set si
+set wrap
+
+" Command line completion
+set wildmenu
+set showcmd
+
+" Always show the current position
+set ruler
+
+" Always show status line
+set laststatus=2
+
+" Search configuration
+set incsearch
+set hlsearch
+set ignorecase
+
+" Highlight matching brackets
+set showmatch
+
+" Disable backups
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Automatically reload the file when it is changed
+set autoread
+
+" Fix backspace
+set backspace=indent,eol,start
+
+" Show the current mode
+set showmode
+
+" Set paste toggle
+set pastetoggle=<F11>
+
+" Filetype plugins
+filetype plugin on
+filetype indent on
+
+" Send more characters
+set ttyfast
+
+" Define how split works
+set splitbelow
+set splitright
+
+" Disable intro message
+set shortmess=atI
+
+" Set colour column
+" set colorcolumn=80
+
+" Setup gvim options
+if has("gui_running")
+	set guifont=Consolas:h12
+end
+
+" Hide the duplicated data caused by lightline
+set noshowmode

@@ -46,14 +46,14 @@ case "$OSTYPE" in
         ;;
     darwin*)
         echo "OSX host detected"
-        source ~/dotfiles/mac/mac_profile
+        source ~/dotfiles/bash/mac_profile
         ;;
     linux*)
         echo "Linux host detected"
         ;;
     msys*)
         echo "Windows host detected"
-        source ~/dotfiles/windows/windows_profile
+        source ~/dotfiles/bash/windows_profile
         ;;
 esac
 
