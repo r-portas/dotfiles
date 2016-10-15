@@ -2,6 +2,9 @@
 # Windows specific configuration
 #
 
+# Enable 256 colors
+export TERM=xterm-256color
+
 # Configuration
 alias localip="ipconfig | grep 'IPv4 Address' | cut -d':' -f2"
 # Python needs to be ran through winpty to display output
@@ -16,5 +19,4 @@ alias emptytrash="rm -rv /c/'\$Recycle.Bin'/*"
 alias lockscreen="rundll32.exe user32.dll,LockWorkStation"
 
 # Change mintty theme
-alias light_theme="cp ~/dotfiles/windows/mintty/minttyrc_light ~/.minttyrc"
-alias dark_theme="cp ~/dotfiles/windows/mintty/minttyrc_dark ~/.minttyrc"
+alias tomorrow_night_theme="cp ~/dotfiles/windows/base16-mintty/mintty/base16-tomorrow-night.minttyrc ~/.minttyrc"

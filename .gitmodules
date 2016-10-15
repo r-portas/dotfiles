@@ -1,0 +1,3 @@
+[submodule "windows/base16-mintty"]
+	path = windows/base16-mintty
+	url = https://github.com/iamthad/base16-mintty.git
