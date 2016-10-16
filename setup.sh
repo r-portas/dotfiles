@@ -6,3 +6,7 @@
 # Setup Simlinks
 ln -siv `pwd`/vim/vimrc ~/.vimrc
 ln -siv `pwd`/bash/bash_profile ~/.bash_profile
+
+# Pull submodules
+git submodule init
+git submodule update
