@@ -10,8 +10,11 @@ eval `dircolors ~/dotfiles/windows/dircolors`
 
 # Configuration
 alias localip="ipconfig | grep 'IPv4 Address' | cut -d':' -f2"
+
 # Python needs to be ran through winpty to display output
 alias python="winpty python.exe"
+alias python3="winpty python3.exe"
+
 # Make meteor work
 alias meteor="cmd //c meteor"
 
