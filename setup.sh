@@ -7,6 +7,18 @@
 ln -siv `pwd`/vim/vimrc ~/.vimrc
 ln -siv `pwd`/bash/bash_profile ~/.bash_profile
 
-# Pull submodules
-git submodule init
-git submodule update
+# Load extra bash profiles for OS
+case "$OSTYPE" in
+    solaris*)
+        ;;
+    darwin*)
+        # Clone the terminal colors
+        git clone https://github.com/vbwx/base16-terminal-app.git ~/base16-terminal
+        ;;
+    linux*)
+        ;;
+    msys*)
+        # Clone mintty base16 colors
+        git clone https://github.com/iamthad/base16-mintty.git ~/base16-mintty
+        ;;
+esac
