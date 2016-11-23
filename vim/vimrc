@@ -43,6 +43,9 @@ syntax enable
 vnoremap > >gv
 vnoremap < <gv
 
+" Enable aching
+set hidden
+
 " Line numbering
 set number
 set numberwidth=5
@@ -56,6 +59,7 @@ set lazyredraw
 " 1 tab == 4 spaces
 set expandtab
 set softtabstop=4
+set tabstop=4
 set shiftwidth=4
 
 " Autoindent stuff
