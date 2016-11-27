@@ -1,5 +1,5 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim configuration
+" Vim minimal configuration
 "
 " Author: Roy Portas - www.royportas.com
 " Version 2.0
@@ -19,6 +19,9 @@ syntax enable
 vnoremap > >gv
 vnoremap < <gv
 
+" Enable caching
+set hidden
+
 " Line numbering
 set number
 set numberwidth=5
@@ -32,6 +35,7 @@ set lazyredraw
 " 1 tab == 4 spaces
 set expandtab
 set softtabstop=4
+set tabstop=4
 set shiftwidth=4
 
 " Autoindent stuff
@@ -85,16 +89,5 @@ set ttyfast
 set splitbelow
 set splitright
 
-" Disable intro message
-set shortmess=atI
-
 " Set colour column
 " set colorcolumn=80
-
-" Setup gvim options
-if has("gui_running")
-	set guifont=Consolas:h12
-end
-
-" Hide the duplicated data caused by lightline
-set noshowmode

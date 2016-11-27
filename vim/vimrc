@@ -43,7 +43,7 @@ syntax enable
 vnoremap > >gv
 vnoremap < <gv
 
-" Enable aching
+" Enable caching
 set hidden
 
 " Line numbering
@@ -112,9 +112,6 @@ set ttyfast
 " Define how split works
 set splitbelow
 set splitright
-
-" Disable intro message
-set shortmess=atI
 
 " Set colour column
 " set colorcolumn=80
