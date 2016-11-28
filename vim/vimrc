@@ -124,8 +124,8 @@ colorscheme base16-tomorrow-night
 
 " Setup gvim options
 if has("gui_running")
-	set guifont=Hack:h14
-        colorscheme base16-tomorrow-night
+    set anti enc=utf-8
+    set guifont=Source\ Code\ Pro:h11
 end
 
 " Hide the duplicated data caused by lightline
