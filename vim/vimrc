@@ -25,6 +25,7 @@ Plug 'itchyny/lightline.vim'                      " Custom statusbar (Requires 2
 Plug 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
 Plug 'posva/vim-vue'                              " Vue language support
 Plug 'chriskempson/base16-vim'                    " Base 16 Colorschemes
+Plug 'Yggdroot/indentLine'                        " Indentation guides
 
 call plug#end()
 
@@ -114,6 +115,10 @@ set splitright
 
 " Set colour column
 " set colorcolumn=80
+
+" Set the indent guide colour to a darker grey
+let g:indentLine_color_term = 239
+
 
 " Setup gvim options
 if has("gui_running")
