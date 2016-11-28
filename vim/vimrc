@@ -119,6 +119,8 @@ set splitright
 " Set the indent guide colour to a darker grey
 let g:indentLine_color_term = 239
 
+" Set the color scheme
+colorscheme base16-tomorrow-night
 
 " Setup gvim options
 if has("gui_running")
