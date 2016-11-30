@@ -50,6 +50,7 @@ case "$OSTYPE" in
         ;;
     linux*)
         echo "Linux host detected"
+        source ~/dotfiles/bash/linux_profile
         ;;
     msys*)
         echo "Windows host detected"
