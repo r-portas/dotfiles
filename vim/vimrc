@@ -26,8 +26,14 @@ Plug 'editorconfig/editorconfig-vim'              " Allows project based vim con
 Plug 'posva/vim-vue'                              " Vue language support
 Plug 'chriskempson/base16-vim'                    " Base 16 Colorschemes
 Plug 'Yggdroot/indentLine'                        " Indentation guides
+Plug 'vim-syntastic/syntastic'                    " Syntastic
 
 call plug#end()
+
+" Syntastic
+let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_python_checkers = ['flake8']
 
 set background=light
 " Keyboard shortcuts
