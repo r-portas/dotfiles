@@ -1,4 +1,4 @@
 # Chocolatey Install Script
 # To run, copy the below line into Admin CMD
 
-choco install 7zip f.lux firefox git googlechrome firefox nodejs python3 hackfont
+choco install 7zip f.lux firefox git googlechrome firefox nodejs python3
