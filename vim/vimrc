@@ -17,23 +17,34 @@ if !filereadable(vimplug_exists)
 endif
 
 call plug#begin(expand('~/.vim/plugged'))
-Plug 'ap/vim-css-color'                           " CSS colouring
 Plug 'airblade/vim-gitgutter'                     " Display git on the gutter
 Plug 'ctrlpvim/ctrlp.vim'                         " File searching
 Plug 'ervandew/supertab'                          " Autocompletion
 Plug 'itchyny/lightline.vim'                      " Custom statusbar (Requires 256 bit colours)
-Plug 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
-Plug 'posva/vim-vue'                              " Vue language support
 Plug 'chriskempson/base16-vim'                    " Base 16 Colorschemes
 Plug 'Yggdroot/indentLine'                        " Indentation guides
-Plug 'vim-syntastic/syntastic'                    " Syntastic
 
+" Coding style and quality
+Plug 'vim-syntastic/syntastic'                    " Syntastic
+Plug 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
+
+" Language Plugins
+Plug 'keith/swift.vim'                            " Swift language
+Plug 'posva/vim-vue'                              " Vue language support
+Plug 'ap/vim-css-color'                           " CSS colouring
 call plug#end()
 
 " Syntastic
 let g:syntastic_check_on_wq = 1
 let g:syntastic_check_on_open = 1
+
+" Syntastic checkers
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_swift_checkers = ['swiftlint']
+
+" Fix xmllint being slow
+let g:syntastic_xml_xmllint_args = "--xinclude --postvalid --nonet"
 
 set background=light
 " Keyboard shortcuts
@@ -58,9 +69,6 @@ set numberwidth=5
 
 " Allow mouse input
 set mouse=a
-
-" Lazy redrawing
-set lazyredraw
 
 " 1 tab == 4 spaces
 set expandtab
@@ -108,9 +116,6 @@ set showmode
 " Set paste toggle
 set pastetoggle=<F11>
 
-" Filetype plugins
-filetype plugin on
-filetype indent on
 
 " Send more characters
 set ttyfast
@@ -126,7 +131,7 @@ set splitright
 let g:indentLine_color_term = 239
 
 " Set the color scheme
-colorscheme base16-tomorrow-night
+" colorscheme base16-tomorrow-night
 
 " Setup gvim options
 if has("gui_running")
@@ -136,3 +141,6 @@ end
 
 " Hide the duplicated data caused by lightline
 set noshowmode
+
+" Filetype plugins
+filetype plugin indent on
