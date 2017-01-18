@@ -30,15 +30,24 @@ Plug 'vim-syntastic/syntastic'                    " Syntastic
 
 call plug#end()
 
+" Ctrl P ignore config
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+" Ignore the following directories and files
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|vendor|node_modules)$',
+  \ 'file': '\v\.(exe|so|dll)$'
+  \ }
+
+" Ignore files in the .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 " Syntastic
 let g:syntastic_check_on_wq = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_javascript_checkers = ['eslint']
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 set background=light
 " Keyboard shortcuts
@@ -63,9 +72,6 @@ set numberwidth=5
 
 " Allow mouse input
 set mouse=a
-
-" Lazy redrawing
-set lazyredraw
 
 " 1 tab == 4 spaces
 set expandtab
@@ -116,9 +122,6 @@ set pastetoggle=<F11>
 " Filetype plugins
 filetype plugin on
 filetype indent on
-
-" Send more characters
-set ttyfast
 
 " Define how split works
 set splitbelow
