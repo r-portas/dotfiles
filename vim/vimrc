@@ -140,7 +140,7 @@ set splitright
 let g:indentLine_color_term = 239
 
 " Set the color scheme
-" colorscheme base16-tomorrow-night
+colorscheme base16-ocean
 
 " Setup gvim options
 if has("gui_running")
