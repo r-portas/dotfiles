@@ -30,6 +30,7 @@ Plug 'editorconfig/editorconfig-vim'              " Allows project based vim con
 
 " Language Plugins
 Plug 'keith/swift.vim'                            " Swift language
+Plug 'othree/html5.vim' 			  " HTML5 language
 Plug 'posva/vim-vue'                              " Vue language support
 Plug 'ap/vim-css-color'                           " CSS colouring
 call plug#end()
