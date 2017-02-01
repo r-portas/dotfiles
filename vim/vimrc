@@ -49,8 +49,8 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " Syntastic
-let g:syntastic_check_on_wq = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 0
 let g:syntastic_xml_xmllint_args = "--xinclude --postvalid --nonet"
 
 " Syntastic checkers
@@ -59,7 +59,12 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_swift_checkers = ['swiftlint']
 let g:syntastic_vue_checkers = ['eslint']
 
-set background=light
+" Disable concealing characters (i.e. JSON)
+set cole = 0
+
+" Set the background color
+"set background=light
+
 " Keyboard shortcuts
 :inoremap jj <esc>
 
@@ -81,7 +86,7 @@ set number
 set numberwidth=5
 
 " Allow mouse input
-set mouse=a
+set mouse = a
 
 " 1 tab == 4 spaces
 set expandtab
