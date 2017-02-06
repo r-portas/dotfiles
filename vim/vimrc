@@ -39,6 +39,7 @@ call plug#end()
 
 " Disable JSON concealing
 let g:vim_json_syntax_conceal = 0
+let g:indentLine_setConceal = 0
 
 " Ctrl P ignore config
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
