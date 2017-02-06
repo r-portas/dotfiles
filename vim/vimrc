@@ -33,7 +33,12 @@ Plug 'keith/swift.vim'                            " Swift language
 Plug 'othree/html5.vim' 			  " HTML5 language
 Plug 'posva/vim-vue'                              " Vue language support
 Plug 'ap/vim-css-color'                           " CSS colouring
+Plug 'elzr/vim-json'                              " JSON language support
+
 call plug#end()
+
+" Disable JSON concealing
+let g:vim_json_syntax_conceal = 0
 
 " Ctrl P ignore config
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
