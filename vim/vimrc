@@ -137,6 +137,9 @@ set showmode
 " Set paste toggle
 set pastetoggle=<F11>
 
+" Custom commands
+ca tn tabnew
+
 " Define how split works
 set splitbelow
 set splitright
