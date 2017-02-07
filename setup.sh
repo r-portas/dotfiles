@@ -6,6 +6,7 @@
 # Setup Simlinks
 ln -siv `pwd`/vim/vimrc ~/.vimrc
 ln -siv `pwd`/bash/bash_profile ~/.bash_profile
+ln -siv `pwd`/git/gitconfig ~/.gitconfig
 
 # Load extra bash profiles for OS
 case "$OSTYPE" in
