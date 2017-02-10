@@ -23,6 +23,7 @@ Plug 'ervandew/supertab'                          " Autocompletion
 Plug 'itchyny/lightline.vim'                      " Custom statusbar (Requires 256 bit colours)
 Plug 'chriskempson/base16-vim'                    " Base 16 Colorschemes
 Plug 'Yggdroot/indentLine'                        " Indentation guides
+Plug 'tpope/vim-commentary' 			  " Commenting plugin
 
 " Coding style and quality
 Plug 'vim-syntastic/syntastic'                    " Syntastic
@@ -36,10 +37,6 @@ Plug 'ap/vim-css-color'                           " CSS colouring
 Plug 'elzr/vim-json'                              " JSON language support
 
 call plug#end()
-
-" Disable JSON concealing
-let g:vim_json_syntax_conceal = 0
-let g:indentLine_setConceal = 0
 
 " Ctrl P ignore config
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
@@ -149,6 +146,7 @@ set splitright
 
 " Set the indent guide colour to a darker grey
 let g:indentLine_color_term = 239
+let g:indentLine_char = '|'
 
 " Set the color scheme
 colorscheme base16-ocean
