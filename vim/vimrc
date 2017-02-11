@@ -65,8 +65,9 @@ let g:syntastic_swift_checkers = ['swiftlint']
 " Set the background color
 "set background=light
 
-" Keyboard shortcuts
-:inoremap jj <esc>
+" Enable spellcheck and line wrap for markdown files
+au BufRead *.md setlocal spell
+au BufRead *.md setlocal tw=79
 
 " Allow system clipboard
 set clipboard=unnamed
@@ -84,9 +85,6 @@ set hidden
 " Line numbering
 set number
 set numberwidth=5
-
-" Allow mouse input
-set mouse = a
 
 " 1 tab == 4 spaces
 set expandtab
@@ -136,6 +134,9 @@ set pastetoggle=<F11>
 
 " Custom commands
 ca tn tabnew
+
+" Keyboard shortcuts
+:inoremap jj <esc>
 
 " Define how split works
 set splitbelow

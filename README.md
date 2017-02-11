@@ -2,10 +2,9 @@
 Repo containing my dotfiles
 
 ## Workflow
-
 ### Code Reviews
-
-Code reviews can be done easily through the `git difftool` command, which is configured to use vim
+Code reviews can be done easily through the `git difftool` command, which is
+configured to use vim
 
 To perform a code review, do the following:
 ```bash
