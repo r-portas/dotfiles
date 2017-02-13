@@ -16,6 +16,10 @@ if !filereadable(vimplug_exists)
 	autocmd VimEnter * PlugInstall
 endif
 
+"===================================================
+" Plugins
+"===================================================
+
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'airblade/vim-gitgutter'                     " Display git on the gutter
 Plug 'ctrlpvim/ctrlp.vim'                         " File searching
@@ -38,6 +42,10 @@ Plug 'elzr/vim-json'                              " JSON language support
 
 call plug#end()
 
+"===================================================
+" Ctrl P Settings
+"===================================================
+
 " Ctrl P ignore config
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
@@ -51,6 +59,10 @@ let g:ctrlp_custom_ignore = {
 " Ignore files in the .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
+"===================================================
+" Syntastic Settings
+"===================================================
+
 " Syntastic
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_open = 0
@@ -62,8 +74,13 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_vue_checkers = ['eslint']
 let g:syntastic_swift_checkers = ['swiftlint']
 
-" Set the background color
-"set background=light
+"===================================================
+" Indent Line Settings
+"===================================================
+
+" Set the indent guide colour to a darker grey
+let g:indentLine_color_term = 239
+let g:indentLine_char = '|'
 
 " Enable spellcheck and line wrap for markdown files
 au BufRead *.md setlocal spell
@@ -141,13 +158,6 @@ ca tn tabnew
 " Define how split works
 set splitbelow
 set splitright
-
-" Set colour column
-" set colorcolumn=80
-
-" Set the indent guide colour to a darker grey
-let g:indentLine_color_term = 239
-let g:indentLine_char = '|'
 
 " Set the color scheme
 colorscheme base16-ocean
