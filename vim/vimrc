@@ -1,9 +1,8 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim configuration
-"
+"===================================================
+" Vim configuration "
 " Author: Roy Portas - www.royportas.com
-" Version 2.0
-""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Version: 2.0
+"===================================================
 
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
@@ -21,24 +20,24 @@ endif
 "===================================================
 
 call plug#begin(expand('~/.vim/plugged'))
-Plug 'airblade/vim-gitgutter'                     " Display git on the gutter
-Plug 'ctrlpvim/ctrlp.vim'                         " File searching
-Plug 'ervandew/supertab'                          " Autocompletion
-Plug 'itchyny/lightline.vim'                      " Custom statusbar (Requires 256 bit colours)
-Plug 'chriskempson/base16-vim'                    " Base 16 Colorschemes
-Plug 'Yggdroot/indentLine'                        " Indentation guides
-Plug 'tpope/vim-commentary' 			  " Commenting plugin
+Plug 'airblade/vim-gitgutter'                       " Display git on the gutter
+Plug 'ctrlpvim/ctrlp.vim'                           " File searching
+Plug 'ervandew/supertab'                            " Autocompletion
+Plug 'itchyny/lightline.vim'                        " Custom statusbar (Requires 256 bit colours)
+Plug 'chriskempson/base16-vim'                      " Base 16 Colorschemes
+Plug 'Yggdroot/indentLine'                          " Indentation guides
+Plug 'tpope/vim-commentary'                         " Commenting plugin
 
 " Coding style and quality
-Plug 'vim-syntastic/syntastic'                    " Syntastic
-Plug 'editorconfig/editorconfig-vim'              " Allows project based vim configurations
+Plug 'vim-syntastic/syntastic'                      " Syntastic
+Plug 'editorconfig/editorconfig-vim'                " Allows project based vim configurations
 
 " Language Plugins
-Plug 'keith/swift.vim'                            " Swift language
-Plug 'othree/html5.vim' 			  " HTML5 language
-Plug 'posva/vim-vue'                              " Vue language support
-Plug 'ap/vim-css-color'                           " CSS colouring
-Plug 'elzr/vim-json'                              " JSON language support
+Plug 'keith/swift.vim'                              " Swift language
+Plug 'othree/html5.vim' 			                " HTML5 language
+Plug 'posva/vim-vue'                                " Vue language support
+Plug 'ap/vim-css-color'                             " CSS colouring
+Plug 'elzr/vim-json'                                " JSON language support
 
 call plug#end()
 
@@ -66,6 +65,8 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " Syntastic
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_open = 0
+"
+" Fix slow parsing of XML files
 let g:syntastic_xml_xmllint_args = "--xinclude --postvalid --nonet"
 
 " Syntastic checkers
@@ -82,6 +83,27 @@ let g:syntastic_swift_checkers = ['swiftlint']
 let g:indentLine_color_term = 239
 let g:indentLine_char = '|'
 
+"===================================================
+" Shortcuts
+"===================================================
+
+" Set paste toggle
+set pastetoggle=<F11>
+
+" Custom commands
+ca tn tabnew
+
+" Keyboard shortcuts
+:inoremap jj <esc>
+
+" Better block indenting
+vnoremap > >gv
+vnoremap < <gv
+
+"===================================================
+" General Settings
+"===================================================
+
 " Enable spellcheck and line wrap for markdown files
 au BufRead *.md setlocal spell
 au BufRead *.md setlocal tw=79
@@ -91,10 +113,6 @@ set clipboard=unnamed
 
 " Enable syntax highlighting
 syntax enable
-
-" Better block indenting
-vnoremap > >gv
-vnoremap < <gv
 
 " Enable caching
 set hidden
@@ -143,21 +161,16 @@ set autoread
 " Fix backspace
 set backspace=indent,eol,start
 
-" Show the current mode
-set showmode
-
-" Set paste toggle
-set pastetoggle=<F11>
-
-" Custom commands
-ca tn tabnew
-
-" Keyboard shortcuts
-:inoremap jj <esc>
+" Show the current mode (not needed for lightline)
+" set showmode
 
 " Define how split works
 set splitbelow
 set splitright
+
+"===================================================
+" Theme and color Settings
+"===================================================
 
 " Set the color scheme
 colorscheme base16-ocean

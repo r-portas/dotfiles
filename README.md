@@ -1,6 +1,13 @@
 # dotfiles
 Repo containing my dotfiles
 
+## Install
+```bash
+git clone https://github.com/r-portas/dotfiles
+cd dotfiles
+sh setup.sh
+```
+
 ## Workflow
 ### Code Reviews
 Code reviews can be done easily through the `git difftool` command, which is
@@ -17,6 +24,11 @@ git difftool master
 ```
 
 The changes will be displayed in the right pane of vim
+
+## Useful Vim Shortcuts
+| Key       | Description                                           |
+| --------- | ----------------------------------------------------- |
+| `gx`      | Open the URL under the cursor in a browser            |
 
 ## Fonts
 

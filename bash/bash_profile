@@ -1,11 +1,11 @@
-#
+#===================================================
 # Default configuration for bash
 # Loads in OS specific files as required
 #
-# Author: Roy Portas
-#
+# Author: Roy Portas - www.royportas.com
+#===================================================
 
-# Variables
+# Load the user's custom file, contains system specific options
 USER_VARIABLES=~/bash_variables
 
 # Aliases

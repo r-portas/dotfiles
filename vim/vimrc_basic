@@ -1,13 +1,34 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim minimal configuration
+"===================================================
+" Vim configuration
 "
 " Author: Roy Portas - www.royportas.com
-" Version 2.0
-""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Version: 2.0 - basic
+"===================================================
 
-set background=light
+"===================================================
+" Shortcuts
+"===================================================
+
+" Set paste toggle
+set pastetoggle=<F11>
+
+" Custom commands
+ca tn tabnew
+
 " Keyboard shortcuts
 :inoremap jj <esc>
+
+" Better block indenting
+vnoremap > >gv
+vnoremap < <gv
+
+"===================================================
+" General Settings
+"===================================================
+
+" Enable spellcheck and line wrap for markdown files
+au BufRead *.md setlocal spell
+au BufRead *.md setlocal tw=79
 
 " Allow system clipboard
 set clipboard=unnamed
@@ -15,22 +36,12 @@ set clipboard=unnamed
 " Enable syntax highlighting
 syntax enable
 
-" Better block indenting
-vnoremap > >gv
-vnoremap < <gv
-
 " Enable caching
 set hidden
 
 " Line numbering
 set number
 set numberwidth=5
-
-" Allow mouse input
-set mouse=a
-
-" Lazy redrawing
-set lazyredraw
 
 " 1 tab == 4 spaces
 set expandtab
@@ -72,22 +83,18 @@ set autoread
 " Fix backspace
 set backspace=indent,eol,start
 
-" Show the current mode
+" Show the current mode (not needed for lightline)
 set showmode
-
-" Set paste toggle
-set pastetoggle=<F11>
-
-" Filetype plugins
-filetype plugin on
-filetype indent on
-
-" Send more characters
-set ttyfast
 
 " Define how split works
 set splitbelow
 set splitright
 
-" Set colour column
-" set colorcolumn=80
+" Setup gvim options
+if has("gui_running")
+    set anti enc=utf-8
+    set guifont=Fira\ Mono:h11
+end
+
+" Filetype plugins
+filetype plugin indent on

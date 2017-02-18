@@ -1,6 +1,8 @@
+#===================================================
+# Windows configuration
 #
-# Windows specific configuration
-#
+# Author: Roy Portas - www.royportas.com
+#===================================================
 
 # Enable 256 colors
 export TERM=xterm-256color
