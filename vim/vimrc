@@ -175,6 +175,9 @@ set splitright
 " Set the color scheme
 colorscheme base16-ocean
 
+" Set the highlight color to light yellow
+hi Search ctermbg=LightYellow
+
 " Setup gvim options
 if has("gui_running")
     set anti enc=utf-8
