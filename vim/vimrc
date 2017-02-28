@@ -123,6 +123,9 @@ vnoremap < <gv
 au BufRead *.md setlocal spell
 au BufRead *.md setlocal tw=79
 
+" Autmatically resize panes when Vim is resized
+autocmd VimResized * wincmd =
+
 " Allow system clipboard
 set clipboard=unnamed
 
