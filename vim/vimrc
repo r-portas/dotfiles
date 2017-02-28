@@ -4,6 +4,16 @@
 " Version: 2.0
 "===================================================
 
+"===================================================
+" Variables
+"===================================================
+
+let s:lightTheme = 1
+
+"===================================================
+" Vim Plug
+"===================================================
+
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
 if !filereadable(vimplug_exists)
@@ -80,7 +90,12 @@ let g:syntastic_swift_checkers = ['swiftlint']
 "===================================================
 
 " Set the indent guide colour to a darker grey
-let g:indentLine_color_term = 239
+if s:lightTheme
+    let g:indentLine_color_term = 253
+else
+    let g:indentLine_color_term = 239
+endif
+
 let g:indentLine_char = '|'
 
 "===================================================
@@ -175,8 +190,13 @@ set splitright
 " Set the color scheme
 colorscheme base16-ocean
 
-" Set the highlight color to light yellow
-hi Search ctermbg=LightYellow
+if s:lightTheme
+    " Set the highlight color to light yellow
+    hi Search ctermbg=LightYellow
+
+    " Set the highlight color to light grey
+    hi Visual ctermbg=LightYellow
+endif
 
 " Setup gvim options
 if has("gui_running")
