@@ -98,6 +98,8 @@ endif
 
 let g:indentLine_char = '|'
 
+let g:indentLink_concealcursor = &concealcursor
+
 "===================================================
 " Shortcuts
 "===================================================
