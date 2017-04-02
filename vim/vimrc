@@ -8,7 +8,7 @@
 " Variables
 "===================================================
 
-let s:lightTheme = 1
+let s:lightTheme = 0
 
 "===================================================
 " Vim Plug
@@ -98,7 +98,7 @@ endif
 
 let g:indentLine_char = '|'
 
-let g:indentLink_concealcursor = &concealcursor
+let g:indentLine_concealcursor = &concealcursor
 
 "===================================================
 " Shortcuts
@@ -193,7 +193,7 @@ set splitright
 "===================================================
 
 " Set the color scheme
-colorscheme base16-ocean
+colorscheme base16-tomorrow-night
 
 if s:lightTheme
     " Set the highlight color to light yellow
@@ -205,8 +205,8 @@ endif
 
 " Setup gvim options
 if has("gui_running")
-    set anti enc=utf-8
-    set guifont=Fira\ Mono:h11
+    " set anti enc=utf-8
+    set guifont=Menlo:h12
 end
 
 " Hide the duplicated data caused by lightline
