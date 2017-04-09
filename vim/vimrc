@@ -149,7 +149,8 @@ set shiftwidth=4
 
 " Autoindent stuff
 set ai
-set si
+" SmartIndent breaks some languages
+" set si
 set wrap
 
 " Command line completion
