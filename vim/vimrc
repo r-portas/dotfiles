@@ -93,7 +93,7 @@ let g:syntastic_swift_checkers = ['swiftlint']
 " Disable auto colors
 let g:indent_guides_auto_colors = 0
 
-# Set the colors, green seems to work good with base-16 themes
+" Set the colors, green seems to work good with base-16 themes
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=green ctermbg=green
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=green
 
