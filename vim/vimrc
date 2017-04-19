@@ -35,7 +35,7 @@ Plug 'ctrlpvim/ctrlp.vim'                           " File searching
 Plug 'ervandew/supertab'                            " Autocompletion
 Plug 'itchyny/lightline.vim'                        " Custom statusbar (Requires 256 bit colours)
 Plug 'chriskempson/base16-vim'                      " Base 16 Colorschemes
-Plug 'Yggdroot/indentLine'                          " Indentation guides
+Plug 'nathanaelkane/vim-indent-guides'              " Indent guides
 Plug 'tpope/vim-commentary'                         " Commenting plugin
 
 " Coding style and quality
@@ -87,19 +87,24 @@ let g:syntastic_vue_checkers = ['eslint']
 let g:syntastic_swift_checkers = ['swiftlint']
 
 "===================================================
-" Indent Line Settings
+" Indent Guide Settings
 "===================================================
 
-" Set the indent guide colour to a darker grey
-if s:lightTheme
-    let g:indentLine_color_term = 253
-else
-    let g:indentLine_color_term = 239
-endif
+" Disable auto colors
+let g:indent_guides_auto_colors = 0
 
-let g:indentLine_char = '|'
+# Set the colors, green seems to work good with base-16 themes
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=green ctermbg=green
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=green
 
-let g:indentLine_concealcursor = &concealcursor
+" Set the indent size to a single character
+let g:indent_guides_guide_size = 1
+
+" Set the start level to 2
+let g:indent_guides_start_level = 2
+
+" Enable on startup
+let g:indent_guides_enable_on_vim_startup = 1
 
 "===================================================
 " Shortcuts
@@ -216,3 +221,6 @@ set noshowmode
 
 " Filetype plugins
 filetype plugin indent on
+
+" Don't conceal the cursor when a JSON file is open
+let g:vim_json_syntax_conceal = 0
