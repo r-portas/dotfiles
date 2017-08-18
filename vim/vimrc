@@ -8,6 +8,7 @@
 " Variables
 "===================================================
 
+
 "===================================================
 " Vim Plug
 "===================================================
@@ -21,21 +22,22 @@ if !filereadable(vimplug_exists)
 	let g:not_finish_vimplug = "yes"
 
 	autocmd VimEnter * PlugInstall
-endif
-
+endif 
 "===================================================
 " Plugins
 "===================================================
 
 call plug#begin(expand('~/.vim/plugged'))
-Plug 'airblade/vim-gitgutter'                       " Display git on the gutter
+" Plug 'airblade/vim-gitgutter'                       " Caused visual bugs
 Plug 'ctrlpvim/ctrlp.vim'                           " File searching
 Plug 'ervandew/supertab'                            " Autocompletion
 Plug 'itchyny/lightline.vim'                        " Custom statusbar (Requires 256 bit colours)
 Plug 'chriskempson/base16-vim'                      " Base 16 Colorschemes
-Plug 'arcticicestudio/nord-vim'                     " Nord color scheme
+Plug 'altercation/vim-colors-solarized'
+Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-commentary'                         " Commenting plugin
-Plug 'tpope/vim-fugitive'                           " Git support
+" Plug 'tpope/vim-fugitive'                           " Git support
+" Plug 'wakatime/vim-wakatime'
 
 " Coding style and quality
 Plug 'vim-syntastic/syntastic'                      " Syntastic
@@ -75,7 +77,6 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 "===================================================
 
 let g:lightline = {
-    \ 'colorscheme': 'nord',
     \ }
 
 "===================================================
@@ -95,6 +96,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_vue_checkers = ['eslint']
 let g:syntastic_swift_checkers = ['swiftlint']
 let g:syntastic_typescript_checkers = ['tslint']
+let g:syntastic_java_checkers = []
 
 "===================================================
 " Shortcuts
@@ -116,6 +118,10 @@ vnoremap < <gv
 "===================================================
 " General Settings
 "===================================================
+
+" Clear highlighting on escape in normal mode
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
 
 " Enable spellcheck and line wrap for markdown files
 au BufRead *.md setlocal spell
@@ -182,13 +188,18 @@ set backspace=indent,eol,start
 set splitbelow
 set splitright
 
+set colorcolumn=110
+
 "===================================================
 " Theme and color Settings
 "===================================================
 
 " Set the color scheme
-" colorscheme base16-tomorrow-night
-colorscheme nord
+colorscheme base16-solarized-light
+
+" Nicer colors for solarized light
+highlight Search ctermbg=LightYellow
+highlight Visual ctermbg=LightYellow
 
 " Setup gvim options
 if has("gui_running")
@@ -204,3 +215,6 @@ filetype plugin indent on
 
 " Don't conceal the cursor when a JSON file is open
 let g:vim_json_syntax_conceal = 0
+
+" Syntax highlighting for JSDOC
+let g:javascript_plugin_jsdoc = 1
