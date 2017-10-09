@@ -28,17 +28,12 @@ endif
 "===================================================
 
 call plug#begin(expand('~/.vim/plugged'))
-" Plug 'airblade/vim-gitgutter'                       " Caused visual bugs
 Plug 'mhinz/vim-signify'
 Plug 'ctrlpvim/ctrlp.vim'                           " File searching
 Plug 'ervandew/supertab'                            " Autocompletion
 Plug 'itchyny/lightline.vim'                        " Custom statusbar (Requires 256 bit colours)
 Plug 'chriskempson/base16-vim'                      " Base 16 Colorschemes
-Plug 'altercation/vim-colors-solarized'
-Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-commentary'                         " Commenting plugin
-" Plug 'tpope/vim-fugitive'                           " Git support
-" Plug 'wakatime/vim-wakatime'
 
 " Coding style and quality
 Plug 'vim-syntastic/syntastic'                      " Syntastic
@@ -51,8 +46,7 @@ Plug 'posva/vim-vue'                                " Vue language support
 Plug 'elzr/vim-json'                                " JSON language support
 Plug 'pangloss/vim-javascript'                      " JavaScript langauge support
 Plug 'mxw/vim-jsx'                                  " React support
-Plug 'r-portas/cup.vim'                             " JavaCup support
-Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'                   " Typescript language support
 
 call plug#end()
 
