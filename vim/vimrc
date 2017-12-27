@@ -28,17 +28,15 @@ endif
 "===================================================
 
 call plug#begin(expand('~/.vim/plugged'))
-Plug 'mhinz/vim-signify'
+Plug 'mhinz/vim-signify'                            " A better git gutter
 Plug 'ctrlpvim/ctrlp.vim'                           " File searching
 Plug 'ajh17/VimCompletesMe'                         " Autocompletion
 Plug 'itchyny/lightline.vim'                        " Custom statusbar (Requires 256 bit colours)
 Plug 'chriskempson/base16-vim'                      " Base 16 Colorschemes
 Plug 'tpope/vim-commentary'                         " Commenting plugin
-Plug 'wakatime/vim-wakatime'
 
 " Coding style and quality
-" Plug 'vim-syntastic/syntastic'                      " Syntastic
-Plug 'w0rp/ale'
+Plug 'w0rp/ale'                                     " Async syntax checking, requires Vim 8
 Plug 'editorconfig/editorconfig-vim'                " Allows project based vim configurations
 
 " Language Plugins
@@ -79,25 +77,6 @@ let g:lightline = {
     \ }
 
 "===================================================
-" Syntastic Settings
-"===================================================
-
-" Syntastic
-let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_open = 0
-"
-" Fix slow parsing of XML files
-let g:syntastic_xml_xmllint_args = "--xinclude --postvalid --nonet"
-
-" Syntastic checkers
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_vue_checkers = ['eslint']
-let g:syntastic_swift_checkers = ['swiftlint']
-let g:syntastic_typescript_checkers = ['tslint']
-let g:syntastic_java_checkers = []
-
-"===================================================
 " Shortcuts
 "===================================================
 
@@ -107,8 +86,8 @@ set pastetoggle=<F11>
 " Custom commands
 ca tn tabnew
 
-" Keyboard shortcuts
-:inoremap jj <esc>
+" Use jk to escape insert mode
+inoremap jk <ESC>
 
 " Better block indenting
 vnoremap > >gv
@@ -170,9 +149,8 @@ set ignorecase
 set showmatch
 
 " Disable backups
-set nobackup
-set nowritebackup
 set noswapfile
+set backupcopy=yes
 
 " Automatically reload the file when it is changed
 set autoread
@@ -187,6 +165,18 @@ set splitright
 " Set the line column
 set colorcolumn=110
 
+<<<<<<< HEAD
+=======
+" Set lazy redraw
+set lazyredraw
+
+" Speed stuff up
+set ttyfast
+
+" Fix the syntax highlighting in Vue files
+autocmd FileType vue syntax sync fromstart
+
+>>>>>>> aa0b5e79b27750b00721b054e0e7564f8c3b55c0
 "===================================================
 " Theme and color Settings
 "===================================================
