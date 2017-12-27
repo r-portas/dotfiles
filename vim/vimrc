@@ -165,8 +165,6 @@ set splitright
 " Set the line column
 set colorcolumn=110
 
-<<<<<<< HEAD
-=======
 " Set lazy redraw
 set lazyredraw
 
@@ -176,7 +174,6 @@ set ttyfast
 " Fix the syntax highlighting in Vue files
 autocmd FileType vue syntax sync fromstart
 
->>>>>>> aa0b5e79b27750b00721b054e0e7564f8c3b55c0
 "===================================================
 " Theme and color Settings
 "===================================================
