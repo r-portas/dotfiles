@@ -20,6 +20,7 @@ alias ls="ls --color=auto"
 alias tarc="tar czvf"
 alias tarx="tar xzvf"
 alias tart="tar tzvf"
+alias v="nvim"
 
 # Colours
 export COLOR_NC='\e[0m' # No Color

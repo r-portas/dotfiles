@@ -30,13 +30,15 @@ endif
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'mhinz/vim-signify'
 Plug 'ctrlpvim/ctrlp.vim'                           " File searching
-Plug 'ervandew/supertab'                            " Autocompletion
+Plug 'ajh17/VimCompletesMe'                         " Autocompletion
 Plug 'itchyny/lightline.vim'                        " Custom statusbar (Requires 256 bit colours)
 Plug 'chriskempson/base16-vim'                      " Base 16 Colorschemes
 Plug 'tpope/vim-commentary'                         " Commenting plugin
+Plug 'wakatime/vim-wakatime'
 
 " Coding style and quality
-Plug 'vim-syntastic/syntastic'                      " Syntastic
+" Plug 'vim-syntastic/syntastic'                      " Syntastic
+Plug 'w0rp/ale'
 Plug 'editorconfig/editorconfig-vim'                " Allows project based vim configurations
 
 " Language Plugins
@@ -47,6 +49,7 @@ Plug 'elzr/vim-json'                                " JSON language support
 Plug 'pangloss/vim-javascript'                      " JavaScript langauge support
 Plug 'mxw/vim-jsx'                                  " React support
 Plug 'leafgarland/typescript-vim'                   " Typescript language support
+Plug 'ianks/vim-tsx'
 
 call plug#end()
 
@@ -66,6 +69,7 @@ let g:ctrlp_custom_ignore = {
 
 " Ignore files in the .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 
 "===================================================
 " Lightline Settings
@@ -183,9 +187,6 @@ set splitright
 " Set the line column
 set colorcolumn=110
 
-" Set lazy redraw
-set lazyredraw
-
 "===================================================
 " Theme and color Settings
 "===================================================
@@ -200,7 +201,7 @@ highlight Visual ctermbg=LightYellow
 " Setup gvim options
 if has("gui_running")
     " set anti enc=utf-8
-    set guifont=Source\ Code\ Pro:h12
+    set guifont=Ubuntu\ Mono:h14
 end
 
 " Hide the duplicated data caused by lightline
@@ -214,3 +215,15 @@ let g:vim_json_syntax_conceal = 0
 
 " Syntax highlighting for JSDOC
 let g:javascript_plugin_jsdoc = 1
+
+" Apply jsx syntax to js files
+let g:jsx_ext_required = 0
+
+" Open typings file
+function GetTypings(module_name)
+    echom "node_modules/@types/" . a:module_name . "/index.d.ts"
+    let file = globpath(getcwd(), "node_modules/@types/" . a:module_name . "/index.d.ts")
+    execute "tabedit " . file
+endfunction
+
+command! -nargs=1 Typings call GetTypings(<f-args>)
