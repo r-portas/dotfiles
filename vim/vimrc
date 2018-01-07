@@ -30,7 +30,7 @@ endif
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'mhinz/vim-signify'                            " A better git gutter
 Plug 'ctrlpvim/ctrlp.vim'                           " File searching
-Plug 'ajh17/VimCompletesMe'                         " Autocompletion
+Plug 'ervandew/supertab'                            " Autocompletion
 Plug 'itchyny/lightline.vim'                        " Custom statusbar (Requires 256 bit colours)
 Plug 'chriskempson/base16-vim'                      " Base 16 Colorschemes
 Plug 'tpope/vim-commentary'                         " Commenting plugin
