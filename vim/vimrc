@@ -28,7 +28,7 @@ endif
 "===================================================
 
 call plug#begin(expand('~/.vim/plugged'))
-Plug 'mhinz/vim-signify'                            " A better git gutter
+" Plug 'mhinz/vim-signify'                            " A better git gutter
 Plug 'ctrlpvim/ctrlp.vim'                           " File searching
 Plug 'ervandew/supertab'                            " Autocompletion
 Plug 'itchyny/lightline.vim'                        " Custom statusbar (Requires 256 bit colours)
@@ -36,18 +36,19 @@ Plug 'chriskempson/base16-vim'                      " Base 16 Colorschemes
 Plug 'tpope/vim-commentary'                         " Commenting plugin
 
 " Coding style and quality
-Plug 'w0rp/ale'                                     " Async syntax checking, requires Vim 8
+" Plug 'w0rp/ale'                                     " Async syntax checking, requires Vim 8
 Plug 'editorconfig/editorconfig-vim'                " Allows project based vim configurations
 
 " Language Plugins
 Plug 'keith/swift.vim'                              " Swift language
 Plug 'othree/html5.vim' 			                " HTML5 language
-Plug 'posva/vim-vue'                                " Vue language support
-Plug 'elzr/vim-json'                                " JSON language support
-Plug 'pangloss/vim-javascript'                      " JavaScript langauge support
-Plug 'mxw/vim-jsx'                                  " React support
-Plug 'leafgarland/typescript-vim'                   " Typescript language support
-Plug 'ianks/vim-tsx'
+Plug 'posva/vim-vue'                                " Vue
+Plug 'elzr/vim-json'                                " JSON
+Plug 'pangloss/vim-javascript'                      " JavaScript
+Plug 'mxw/vim-jsx'                                  " JSX (JS)
+Plug 'leafgarland/typescript-vim'                   " Typescript
+Plug 'peitalin/vim-jsx-typescript'                  " Typescript JSX
+Plug 'PProvost/vim-ps1'                             " Powershell
 
 call plug#end()
 
