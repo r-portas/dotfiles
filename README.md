@@ -31,6 +31,5 @@ The changes will be displayed in the right pane of vim
 | `gx`      | Open the URL under the cursor in a browser            |
 
 ## Fonts
-
-SkyFonts: http://skyfonts.com/
-- Fira
+- [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)
+- [Fira Mono](https://fonts.google.com/specimen/Fira+Mono)
