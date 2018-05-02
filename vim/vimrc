@@ -213,4 +213,14 @@ function GetTypings(module_name)
     execute "tabedit " . file
 endfunction
 
+" Changes the indent size
+function ChangeIndent(indent_size_str)
+    let indent_size = str2nr(a:indent_size_str)
+    let &softtabstop=indent_size
+    let &tabstop=indent_size
+    let &shiftwidth=indent_size
+endfunction
+
+
 command! -nargs=1 Typings call GetTypings(<f-args>)
+command! -nargs=1 Indent call ChangeIndent(<f-args>)
