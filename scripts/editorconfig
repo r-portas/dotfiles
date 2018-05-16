@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#
+# Generates an editorconfig rc file
+
+# Throw halt on errors
+set -o errexit
+set -o pipefail
+set -o nounset
+
+if [ -z "$1" ]
+then
+    echo "No filetype supplied"
+fi
+
+lang=$1
+dir=$(pwd)
+
