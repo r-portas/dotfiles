@@ -8,6 +8,12 @@ cd dotfiles
 sh setup.sh
 ```
 
+## Tools
+
+### Terminal Emulator - Hyper
+
+Needs extra setup for windows, such as setting the TERM variable.
+
 ## Workflow
 ### Code Reviews
 Code reviews can be done easily through the `git difftool` command, which is

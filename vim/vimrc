@@ -28,19 +28,15 @@ endif
 "===================================================
 
 call plug#begin(expand('~/.vim/plugged'))
-" Plug 'mhinz/vim-signify'                            " A better git gutter
 Plug 'ctrlpvim/ctrlp.vim'                           " File searching
 Plug 'ervandew/supertab'                            " Autocompletion
 Plug 'itchyny/lightline.vim'                        " Custom statusbar (Requires 256 bit colours)
-Plug 'chriskempson/base16-vim'                      " Base 16 Colorschemes
 Plug 'tpope/vim-commentary'                         " Commenting plugin
 
 " Coding style and quality
-" Plug 'w0rp/ale'                                     " Async syntax checking, requires Vim 8
 Plug 'editorconfig/editorconfig-vim'                " Allows project based vim configurations
 
 " Language Plugins
-Plug 'keith/swift.vim'                              " Swift language
 Plug 'othree/html5.vim' 			                " HTML5 language
 Plug 'posva/vim-vue'                                " Vue
 Plug 'elzr/vim-json'                                " JSON
@@ -86,9 +82,6 @@ set pastetoggle=<F11>
 
 " Custom commands
 ca tn tabnew
-
-" Use jk to escape insert mode
-inoremap jk <ESC>
 
 " Better block indenting
 vnoremap > >gv
@@ -179,9 +172,6 @@ autocmd FileType vue syntax sync fromstart
 " Theme and color Settings
 "===================================================
 
-" Set the color scheme
-colorscheme base16-solarized-light
-
 " Nicer colors for solarized light
 highlight Search ctermbg=LightYellow
 highlight Visual ctermbg=LightYellow
@@ -221,7 +211,6 @@ function ChangeIndent(indent_size_str)
     let &tabstop=indent_size
     let &shiftwidth=indent_size
 endfunction
-
 
 command! -nargs=1 Typings call GetTypings(<f-args>)
 command! -nargs=1 Indent call ChangeIndent(<f-args>)
