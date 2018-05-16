@@ -29,3 +29,7 @@ alias lockscreen="rundll32.exe user32.dll,LockWorkStation"
 
 # Kill nodejs processes
 alias kn="taskkill //im node.exe //f"
+alias kj="taskkill //im java.exe //f"
+
+# Fix conemu issues, breaks mitty though
+# TERM=cygwin
