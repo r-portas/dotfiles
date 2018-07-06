@@ -39,7 +39,7 @@ Plug 'editorconfig/editorconfig-vim'                " Allows project based vim c
 " Language Plugins
 Plug 'posva/vim-vue'                                " Vue
 Plug 'leafgarland/typescript-vim'                   " Typescript
-Plug 'peitalin/vim-jsx-typescript'                  " Typescript JSX
+Plug 'ianks/vim-tsx'                                " Typescript TSX
 Plug 'PProvost/vim-ps1'                             " Powershell
 
 call plug#end()
@@ -149,8 +149,8 @@ set backspace=indent,eol,start
 autocmd FileType vue syntax sync fromstart
 
 " Set filetypes as typescript.jsx, we use this for jsx and js as well
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
-autocmd BufNewFile,BufRead *.ts,*.js set filetype=typescript.jsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+autocmd BufNewFile,BufRead *.ts,*.js set filetype=typescript.tsx
 
 "===================================================
 " Theme and color Settings
