@@ -37,5 +37,6 @@ The changes will be displayed in the right pane of vim
 | `gx`      | Open the URL under the cursor in a browser            |
 
 ## Fonts
+- [Input Mono](http://input.fontbureau.com/)
 - [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)
 - [Fira Mono](https://fonts.google.com/specimen/Fira+Mono)
