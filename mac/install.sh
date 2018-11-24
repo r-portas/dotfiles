@@ -2,15 +2,12 @@
 
 # Setup homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Install caskroom
-brew tap caskroom/cask
-
 # Common Apps
-
+brew install bash
 brew install vim
 brew install python3
 brew install node
+brew install git
 
 brew cask install google-chrome
 brew cask install firefox
