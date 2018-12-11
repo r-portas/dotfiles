@@ -18,6 +18,9 @@ alias python="winpty python.exe"
 alias python3="winpty python3.exe"
 alias python3.5="winpty python3.5.exe"
 
+# NPM also needs to run though winpty, for running scripts certain scripts (.e.g "npm start" for a CRA project)
+alias npm="winpty npm.cmd"
+
 # Make meteor work
 alias meteor="cmd //c meteor"
 
