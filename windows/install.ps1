@@ -13,7 +13,6 @@ choco install -y nodejs
 choco install -y dotnetcore-sdk
 
 # Web Dev tools
-choco install -y yarn
 npm install --global --production windows-build-tools
 
 # Tools
