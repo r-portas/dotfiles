@@ -38,8 +38,10 @@ Plug 'editorconfig/editorconfig-vim'                " Allows project based vim c
 
 " Language Plugins
 Plug 'posva/vim-vue'                                " Vue
-Plug 'leafgarland/typescript-vim'                   " Typescript
-Plug 'ianks/vim-tsx'                                " Typescript TSX
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+"Plug 'leafgarland/typescript-vim'                   " Typescript
+"Plug 'ianks/vim-tsx'                                " Typescript TSX
 Plug 'PProvost/vim-ps1'                             " Powershell
 
 call plug#end()
@@ -86,6 +88,10 @@ vnoremap < <gv
 "===================================================
 " General Settings
 "===================================================
+
+" Disable bell
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 " Clear highlighting on escape in normal mode
 nnoremap <esc> :noh<return><esc>
@@ -149,8 +155,9 @@ set backspace=indent,eol,start
 autocmd FileType vue syntax sync fromstart
 
 " Set filetypes as typescript.jsx, we use this for jsx and js as well
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
-autocmd BufNewFile,BufRead *.ts,*.js set filetype=typescript.tsx
+" Disabled cause the tsx syntax isn't great
+" autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+" autocmd BufNewFile,BufRead *.ts,*.js set filetype=typescript.tsx
 
 "===================================================
 " Theme and color Settings
