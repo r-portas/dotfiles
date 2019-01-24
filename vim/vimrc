@@ -32,17 +32,19 @@ Plug 'ctrlpvim/ctrlp.vim'                           " File searching
 Plug 'ervandew/supertab'                            " Autocompletion
 Plug 'itchyny/lightline.vim'                        " Custom statusbar (Requires 256 bit colours)
 Plug 'tpope/vim-commentary'                         " Commenting plugin
+Plug 'tpope/vim-vinegar'                            " Better netrw
 
 " Coding style and quality
 Plug 'editorconfig/editorconfig-vim'                " Allows project based vim configurations
 
 " Language Plugins
-Plug 'posva/vim-vue'                                " Vue
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'sheerun/vim-polyglot'                         " Language pack
+"Plug 'posva/vim-vue'                                " Vue
+"Plug 'pangloss/vim-javascript'
+"Plug 'mxw/vim-jsx'
 "Plug 'leafgarland/typescript-vim'                   " Typescript
 "Plug 'ianks/vim-tsx'                                " Typescript TSX
-Plug 'PProvost/vim-ps1'                             " Powershell
+"Plug 'PProvost/vim-ps1'                             " Powershell
 
 call plug#end()
 
@@ -92,6 +94,9 @@ vnoremap < <gv
 " Disable bell
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
+
+" Netrw settings
+let g:netrw_liststyle=3
 
 " Clear highlighting on escape in normal mode
 nnoremap <esc> :noh<return><esc>
@@ -179,6 +184,10 @@ set noshowmode
 " Filetype plugins
 filetype plugin indent on
 
+"===================================================
+" Functions
+"===================================================
+
 " Open typings file
 function GetTypings(module_name)
     echom "node_modules/@types/" . a:module_name . "/index.d.ts"
@@ -196,3 +205,5 @@ endfunction
 
 command! -nargs=1 Typings call GetTypings(<f-args>)
 command! -nargs=1 Indent call ChangeIndent(<f-args>)
+command! -nargs=1 indent call ChangeIndent(<f-args>)
+command! -nargs=1 ind call ChangeIndent(<f-args>)
