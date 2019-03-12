@@ -33,18 +33,18 @@ Plug 'ervandew/supertab'                            " Autocompletion
 Plug 'itchyny/lightline.vim'                        " Custom statusbar (Requires 256 bit colours)
 Plug 'tpope/vim-commentary'                         " Commenting plugin
 Plug 'tpope/vim-vinegar'                            " Better netrw
+Plug 'arcticicestudio/nord-vim'
 
 " Coding style and quality
 Plug 'editorconfig/editorconfig-vim'                " Allows project based vim configurations
 
 " Language Plugins
-Plug 'sheerun/vim-polyglot'                         " Language pack
-"Plug 'posva/vim-vue'                                " Vue
-"Plug 'pangloss/vim-javascript'
-"Plug 'mxw/vim-jsx'
-"Plug 'leafgarland/typescript-vim'                   " Typescript
-"Plug 'ianks/vim-tsx'                                " Typescript TSX
-"Plug 'PProvost/vim-ps1'                             " Powershell
+Plug 'posva/vim-vue'                                " Vue
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'                   " Typescript
+Plug 'ianks/vim-tsx'                                " Typescript TSX
+Plug 'PProvost/vim-ps1'                             " Powershell
 
 call plug#end()
 
@@ -71,6 +71,12 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 "===================================================
 
 let g:lightline = {
+    \ 'colorscheme': 'nord',
+    \ 'component': {
+    \   'lineinfo': ' %3l:%-2v',
+    \ },
+    \ 'separator': { 'left': '', 'right': '' },
+    \ 'subseparator': { 'left': '', 'right': '' }
     \ }
 
 "===================================================
